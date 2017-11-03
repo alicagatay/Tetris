@@ -1,3 +1,6 @@
+/*
+ *Course: AP CS A, Year: 2017-2018, Instructor: Sedat Yalçın, Student: Ali Çağatay, Lecture: Tetris 
+ */
 package application;
 /**
  * our imports
