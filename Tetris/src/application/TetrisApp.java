@@ -2,7 +2,7 @@
  *Course: AP CS A, Year: 2017-2018, Instructor: Sedat Yalçın, Student: Ali Çağatay, Lecture: Tetris 
  */
 package application;
-/**
+/*
  * The declarations of the variables used in TetrisApp class.
  */
 import javafx.animation.AnimationTimer;
@@ -56,6 +56,27 @@ public class TetrisApp extends Application {
                 new Piece(1, Direction.RIGHT),
                 new Piece(2, Direction.RIGHT),
                 new Piece(1, Direction.DOWN)));
+        
+        /**
+         * this code piece creates one of our shapes.
+         */
+        original.add(new Tetromino(Color.RED,
+                new Piece(0, Direction.DOWN),
+                new Piece(1, Direction.DOWN),
+                new Piece(2, Direction.DOWN),
+                new Piece(3, Direction.DOWN)));
+        
+        
+        /**
+         * this code piece creates one of our shapes.
+         */
+        original.add(new Tetromino(Color.BLUE,
+                new Piece(0, Direction.DOWN),
+                new Piece(1, Direction.LEFT),
+                new Piece(1, Direction.RIGHT),
+                new Piece(1, Direction.DOWN)));
+        
+
 
         /**
          * this code piece creates an another shape.
@@ -65,6 +86,24 @@ public class TetrisApp extends Application {
                 new Piece(1, Direction.RIGHT),
                 new Piece(1, Direction.RIGHT, Direction.DOWN),
                 new Piece(1, Direction.DOWN)));
+        
+        /**
+         * this code piece creates one of our shapes.
+         */
+        original.add(new Tetromino(Color.GREEN,
+                new Piece(0, Direction.DOWN),
+                new Piece(1, Direction.LEFT),
+                new Piece(2, Direction.LEFT),
+                new Piece(1, Direction.DOWN)));
+        
+        /**
+         * this code piece creates one of our shapes.
+         */
+        original.add(new Tetromino(Color.ORANGE,
+                new Piece(0, Direction.DOWN),
+                new Piece(1, Direction.LEFT),
+                new Piece(1, Direction.DOWN)));
+        
 
         /**
          * the spawn method spawns our shapes into the program.
@@ -209,7 +248,9 @@ public class TetrisApp extends Application {
 
         return rows;
     }
-
+    /**
+     * This code piece help our shapes to spawn.
+     */
     private void spawn() {
         Tetromino tetromino = original.get(new Random().nextInt(original.size())).copy();
         tetromino.move(GRID_WIDTH / 2, 0);
@@ -224,11 +265,15 @@ public class TetrisApp extends Application {
             System.exit(0);
         }
     }
-
+    /**
+     * This code piece helps our project to start.
+     */
     @Override
     public void start(Stage stage) throws Exception {
         Scene scene = new Scene(createContent());
-
+        /**
+         * This code piece will help our shapes to move, and to turn.
+         */
         scene.setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.SPACE) {
                 makeMove(p -> p.rotate(), p -> p.rotateBack(), false);
@@ -246,8 +291,9 @@ public class TetrisApp extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
+    /**
+     * This code piece helps our program to run all of the code I wrote in this project.
+     */
     public static void main(String[] args) {
         launch(args);
     }
-}
