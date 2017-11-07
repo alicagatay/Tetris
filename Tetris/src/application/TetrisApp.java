@@ -51,7 +51,7 @@ public class TetrisApp extends Application {
         /**
          * this code piece creates one of our shapes.
          */
-        original.add(new Tetromino(Color.GREEN,
+        original.add(new Tetromino(Color.rgb(0, 255, 255),
                 new Piece(0, Direction.DOWN),
                 new Piece(1, Direction.RIGHT),
                 new Piece(2, Direction.RIGHT),
@@ -60,7 +60,7 @@ public class TetrisApp extends Application {
         /**
          * this code piece creates one of our shapes.
          */
-        original.add(new Tetromino(Color.RED,
+        original.add(new Tetromino(Color.rgb(255, 0, 255),
                 new Piece(0, Direction.DOWN),
                 new Piece(1, Direction.DOWN),
                 new Piece(2, Direction.DOWN),
@@ -70,7 +70,7 @@ public class TetrisApp extends Application {
         /**
          * this code piece creates one of our shapes.
          */
-        original.add(new Tetromino(Color.BLUE,
+        original.add(new Tetromino(Color.rgb(255, 255, 0),
                 new Piece(0, Direction.DOWN),
                 new Piece(1, Direction.LEFT),
                 new Piece(1, Direction.RIGHT),
@@ -81,7 +81,7 @@ public class TetrisApp extends Application {
         /**
          * this code piece creates an another shape.
          */
-        original.add(new Tetromino(Color.GRAY,
+        original.add(new Tetromino(Color.rgb(255, 0, 0),
                 new Piece(0, Direction.DOWN),
                 new Piece(1, Direction.RIGHT),
                 new Piece(1, Direction.RIGHT, Direction.DOWN),
@@ -90,7 +90,7 @@ public class TetrisApp extends Application {
         /**
          * this code piece creates one of our shapes.
          */
-        original.add(new Tetromino(Color.GREEN,
+        original.add(new Tetromino(Color.rgb(20, 255, 100),
                 new Piece(0, Direction.DOWN),
                 new Piece(1, Direction.LEFT),
                 new Piece(2, Direction.LEFT),
@@ -99,7 +99,7 @@ public class TetrisApp extends Application {
         /**
          * this code piece creates one of our shapes.
          */
-        original.add(new Tetromino(Color.ORANGE,
+        original.add(new Tetromino(Color.rgb(255, 150, 0),
                 new Piece(0, Direction.DOWN),
                 new Piece(1, Direction.LEFT),
                 new Piece(1, Direction.DOWN)));
@@ -297,3 +297,4 @@ public class TetrisApp extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+}
